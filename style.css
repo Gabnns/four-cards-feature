@@ -1,0 +1,103 @@
+body{
+    color: hsl(229, 6%, 66%);
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+  }
+
+
+main {
+    margin: 50px auto;
+    background-color: beige;
+    border-radius: 20px;
+    width: 85%;
+    height: 100%;
+    padding: 35px;
+}
+
+
+/* CONFIGURAÇÃO DOS TEXTOS PRINCIPAIS*/
+.Title{
+    font-weight: 200;
+}
+  h1{
+    color: hsl(234, 12%, 34%);
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+  h3{
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+
+   p {
+
+      margin-bottom: 50px;  
+} 
+
+  .intro-text{
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+}
+/* CONFIGURAÇÃO E ORGANIZAÇÃO GRID*/
+.grid {
+    align-items: center;
+    display:grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    gap: 25px;
+
+    grid-template-areas: 
+    "c1 c2 c4"
+    "c1 c3 c4" ;
+
+}
+/* CONFIGURAÇÃO E ESTILIZAÇÃO DOS CARDS*/
+.card {
+        border-radius: 15px;
+        box-shadow: 1px 5px 20px 1px lightgray;
+        
+        height: 20vh;
+        padding-left: 10px;
+        padding-bottom: 10px;
+}
+
+.card:first-child(1){
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* CONFIGURAÇÃO INDIVIDUAL DOS CARDS E DEFININDO NOME/POSIÇÃO NA GRID*/
+  #supervisor-text{
+    grid-area:c1;
+    border-top: solid hsl(180, 62%, 55%);
+}
+  #team-builder-text{
+    grid-area:c2 ;
+    border-top: solid hsl(0, 78%, 62%);
+
+}
+  #karma-text{
+    grid-area:c3 ;
+    border-top: solid hsl(34, 97%, 64%);
+    
+}
+  #calculator-text{
+    grid-area:c4 ;
+    border-top: solid hsl(212, 86%, 64%);
+}
+/* CONFIGURAÇÃO DE MONITOR, DEIXANDO TELA RESPONSIVA PARA APARELHOS DE TELAS MENORES*/
+@media only screen and (max-width: 800px) { 
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "c1"
+        "c2"
+        "c3"
+        "c4";
+    }
+    
+}
